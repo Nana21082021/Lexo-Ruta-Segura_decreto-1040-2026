@@ -1,0 +1,17 @@
+LEXO RUTA SEGURA - CORRECCIÓN V1.1
+
+El repositorio quedó con los archivos CSS, JS y logo en la raíz.
+Estas páginas HTML ya fueron corregidas para apuntar a:
+
+- styles.css
+- app.js
+- logo-lexo.png
+
+PASOS:
+1. Descomprima este ZIP.
+2. En GitHub, abra el repositorio Lexo-Ruta-Segura_decreto-1040-2026.
+3. Seleccione Agregar archivo > Cargar archivos.
+4. Cargue los 7 archivos HTML de esta carpeta.
+5. GitHub mostrará que ya existen. Confirme el reemplazo/commit de los archivos.
+6. No elimine styles.css, app.js ni logo-lexo.png.
+7. Después active GitHub Pages desde Configuración > Pages.
