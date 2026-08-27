@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clasificador de Eventos · Lexo Ruta Segura</title>
+<meta name="description" content="Lexo Ruta Segura">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <img src="assets/logo-lexo.png" alt="Lexo Seguros">
+      <div class="brand-copy"><strong>LEXO RUTA SEGURA</strong><span>Decreto 1040 de 2026</span></div>
+    </a>
+    <nav class="menu" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="clasificador.html">Clasificador</a>
+      <a href="responsables.html">Responsables</a>
+      <a href="rutas.html">Rutas</a>
+      <a href="documentos.html">Documentos</a>
+      <a href="capacitacion.html">Capacitación</a>
+      <a href="normativa.html">Normativa</a>
+    </nav>
+    <select id="mobileNav" class="mobile-menu" aria-label="Menú">
+      <option value="">Menú</option>
+      <option value="index.html">Inicio</option>
+      <option value="clasificador.html">Clasificador</option>
+      <option value="responsables.html">Responsables</option>
+      <option value="rutas.html">Rutas</option>
+      <option value="documentos.html">Documentos</option>
+      <option value="capacitacion.html">Capacitación</option>
+      <option value="normativa.html">Normativa</option>
+    </select>
+  </div>
+</header>
+
+
+<main class="section">
+<div class="container" id="classifier">
+  <div class="kicker">Herramienta de direccionamiento</div>
+  <h1 style="font-size:clamp(2.3rem,5vw,4rem)">Clasificador de Eventos</h1>
+  <p class="lead">Esta herramienta <strong>no califica jurídicamente los hechos</strong>. Su función es ayudar al Responsable de Recepción y Activación de Rutas a identificar alertas iniciales y direccionar el reporte a la instancia adecuada.</p>
+  <div class="alert"><strong>Antes de empezar:</strong> no escriba nombres, detalles íntimos, documentos de identidad ni datos sensibles. Responda únicamente con base en características generales del evento.</div>
+  <div class="progress"><div id="progressBar"></div></div>
+
+  <div class="form-card">
+    <section class="question active" id="q0">
+      <div class="kicker">Pregunta 1</div>
+      <h2>¿Existe una amenaza actual, peligro para la integridad, riesgo grave/inminente o necesidad urgente de separar a las personas?</h2>
+      <div class="options">
+        <button class="option" data-next="rUrgente">Sí, existe una alerta inmediata</button>
+        <button class="option" data-next="q1">No se identifica una alerta inmediata</button>
+        <button class="option" data-next="rRevision">No tengo información suficiente</button>
+      </div>
+    </section>
+
+    <section class="question" id="q1">
+      <div class="kicker">Pregunta 2</div>
+      <h2>¿El relato incluye conductas, solicitudes, comentarios, contactos, insinuaciones o comportamientos de naturaleza o connotación sexual?</h2>
+      <div class="options">
+        <button class="option" data-next="rSexual">Sí</button>
+        <button class="option" data-next="q2">No</button>
+        <button class="option" data-next="rRevision">No es posible determinarlo</button>
+      </div>
+    </section>
+
+    <section class="question" id="q2">
+      <div class="kicker">Pregunta 3</div>
+      <h2>¿La situación puede estar relacionada con violencia por razones de género, sexo, identidad/expresión de género u otra condición protegida, o con discriminación?</h2>
+      <div class="options">
+        <button class="option" data-next="rVBG">Sí, posible VBG</button>
+        <button class="option" data-next="rDiscriminacion">Sí, posible discriminación</button>
+        <button class="option" data-next="q3">No / no se observan esos elementos</button>
+        <button class="option" data-next="rRevision">No es posible determinarlo</button>
+      </div>
+    </section>
+
+    <section class="question" id="q3">
+      <div class="kicker">Pregunta 4</div>
+      <h2>¿El relato describe hostigamiento laboral persistente o conductas que podrían relacionarse con modalidades de acoso laboral?</h2>
+      <div class="options">
+        <button class="option" data-next="rCCL">Sí, posible acoso laboral</button>
+        <button class="option" data-next="q4">No</button>
+        <button class="option" data-next="rRevision">No es posible determinarlo</button>
+      </div>
+    </section>
+
+    <section class="question" id="q4">
+      <div class="kicker">Pregunta 5</div>
+      <h2>¿Se trata principalmente de una diferencia, desacuerdo o conflicto laboral sin elementos aparentes de violencia, discriminación o acoso?</h2>
+      <div class="options">
+        <button class="option" data-next="rGestion">Sí</button>
+        <button class="option" data-next="rRevision">No / requiere revisión especializada</button>
+      </div>
+    </section>
+
+    <section class="result" id="rUrgente">
+      <span class="badge badge-red">ALERTA PRIORITARIA</span>
+      <h2>Protección inmediata antes de continuar el trámite</h2>
+      <p>La organización debe activar la revisión urgente de medidas de protección y seguridad. La clasificación definitiva del evento puede continuar después, sin retrasar la protección necesaria.</p>
+      <ul class="checklist">
+        <li>Informar de inmediato al responsable con capacidad para adoptar o coordinar medidas.</li>
+        <li>Evaluar separación de interacción, cambios temporales, protección de la persona y testigos, y demás medidas aplicables sin desmejorar a la víctima.</li>
+        <li>Registrar fecha, hora, decisión, responsable y soporte.</li>
+        <li>Si existe emergencia médica, de seguridad o posible delito, activar las rutas externas competentes según el caso.</li>
+      </ul>
+      <div class="actions"><a class="btn btn-primary" href="rutas.html#urgente">Ver ruta de protección</a><button class="btn btn-light restart">Reiniciar</button></div>
+    </section>
+
+    <section class="result" id="rSexual">
+      <span class="badge badge-red">RUTA ESPECIAL</span>
+      <h2>Posible acoso o violencia sexual</h2>
+      <div class="alert"><strong>No direccionar a conciliación ante el Comité de Convivencia Laboral.</strong> La empresa debe activar su procedimiento especial.</div>
+      <ul class="checklist">
+        <li>Confirmar necesidades de protección inmediata.</li>
+        <li>Activar al Responsable de la Ruta Especial y abrir expediente restringido.</li>
+        <li>Informar derechos, rutas internas y alternativas externas sin exigir denuncia penal previa.</li>
+        <li>Activar apoyos jurídicos y psicosociales definidos por la organización, internos o externos.</li>
+        <li>Aplicar investigación/procedimiento laboral o contractual que corresponda, con debido proceso y sin confrontación obligatoria.</li>
+      </ul>
+      <div class="actions"><a class="btn btn-primary" href="rutas.html#sexual">Ver ruta especial</a><button class="btn btn-light restart">Reiniciar</button></div>
+    </section>
+
+    <section class="result" id="rVBG">
+      <span class="badge badge-red">RUTA ESPECIAL</span>
+      <h2>Posible violencia basada en género</h2>
+      <p>Debe aplicarse la instancia y procedimiento especial definidos por el protocolo. No se debe imponer confrontación o conciliación cuando no corresponda.</p>
+      <div class="actions"><a class="btn btn-primary" href="rutas.html#vbg">Ver ruta VBG</a><button class="btn btn-light restart">Reiniciar</button></div>
+    </section>
+
+    <section class="result" id="rDiscriminacion">
+      <span class="badge badge-blue">RUTA ESPECIAL / REVISIÓN</span>
+      <h2>Posible discriminación</h2>
+      <p>Active la instancia designada por el protocolo para discriminación y revise si además existen elementos de acoso laboral, violencia basada en género u otra ruta concurrente.</p>
+      <div class="actions"><a class="btn btn-primary" href="rutas.html#discriminacion">Ver ruta de discriminación</a><button class="btn btn-light restart">Reiniciar</button></div>
+    </section>
+
+    <section class="result" id="rCCL">
+      <span class="badge badge-green">RUTA PREVENTIVA CCL</span>
+      <h2>Posible asunto de competencia preventiva del Comité de Convivencia Laboral</h2>
+      <p>Direccione conforme a la Ley 1010 de 2006, la Resolución 3461 de 2025 y el procedimiento interno del Comité, sin atribuir al Comité funciones de juez o autoridad sancionadora.</p>
+      <div class="actions"><a class="btn btn-primary" href="rutas.html#ccl">Ver ruta CCL</a><button class="btn btn-light restart">Reiniciar</button></div>
+    </section>
+
+    <section class="result" id="rGestion">
+      <span class="badge badge-blue">GESTIÓN LABORAL</span>
+      <h2>Conflicto o diferencia laboral sin clasificación especial preliminar</h2>
+      <p>Puede requerir gestión de Talento Humano, liderazgo, mediación preventiva u otras instancias internas. Si aparecen nuevos elementos de acoso, violencia o discriminación, vuelva a clasificar.</p>
+      <div class="actions"><button class="btn btn-light restart">Reiniciar</button></div>
+    </section>
+
+    <section class="result" id="rRevision">
+      <span class="badge badge-amber">POR DETERMINAR</span>
+      <h2>Requiere revisión técnica antes de direccionar</h2>
+      <p>La persona receptora no debe forzar una clasificación. Escale a un responsable habilitado o apoyo especializado, manteniendo las medidas de protección que resulten necesarias.</p>
+      <div class="actions"><a class="btn btn-primary" href="responsables.html">Consultar responsables</a><button class="btn btn-light restart">Reiniciar</button></div>
+    </section>
+  </div>
+</div>
+</main>
+
+
+<footer>
+  <div class="container">
+    <strong>LEXO RUTA SEGURA</strong> · Herramienta de apoyo para la prevención, actuación y trazabilidad empresarial.
+    <p>Este portal no sustituye asesoría jurídica, psicológica o médica especializada. El clasificador realiza un direccionamiento preliminar y no determina responsabilidad jurídica, disciplinaria o penal.</p>
+    <p><strong>Privacidad:</strong> no ingrese ni almacene en este sitio nombres, denuncias, evidencias, datos de salud, información sexual, expedientes ni datos sensibles. Los casos reales deben gestionarse en repositorios restringidos definidos por cada organización.</p>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

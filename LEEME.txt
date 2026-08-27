@@ -1,0 +1,4 @@
+LEXO RUTA SEGURA - V1
+
+Esta carpeta docs queda reservada para documentos públicos controlados del kit.
+NO almacenar aquí expedientes, denuncias ni información sensible de casos reales.
